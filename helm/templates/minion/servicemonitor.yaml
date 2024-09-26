@@ -1,4 +1,4 @@
-{{- if and ( .Capabilities.APIVersions.Has "monitoring.coreos.com/v1" ) ( .Values.minion.enabled ) ( .Values.minion.prometheus.jmx.enabled ) ( .Values.minion.servicemonitor.enabled ) }}
+{{- if and ( .Values.minion.servicemonitor.enabled ) ( .Capabilities.APIVersions.Has "monitoring.coreos.com/v1" ) ( .Values.minion.enabled ) ( .Values.minion.prometheus.jmx.enabled ) }}
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:

@@ -135,6 +135,7 @@ controller:
     tlsConfig: {}
 
   prometheusrule:
+    enabled: false
     annotations: {}
     additionalRuleLabels: {}
 
